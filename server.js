@@ -21,7 +21,7 @@ app.use(morgan("dev"));
 
 //API
 app.get('/', (req, res) => {
-    res.send("<h1>Welcome To Ecommerce apps</h1>")
+    res.send("<h1>Welcome To Ecommerce appp</h1>")
 })
 
 const PORT = process.env.PORT || 8080;
