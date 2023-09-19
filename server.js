@@ -1,14 +1,22 @@
 import express from 'express';
 import colors from "colors";
 import dotenv from 'dotenv';
+import morgan from 'morgan';
+import connectDB from './config/db.js';
 
 
 // env
 dotenv.config();
 
+//DataBase config
+connectDB();
 
 //Object
-const app = express()
+const app = express();
+
+//middlewares
+app.use(express.json());
+app.use(morgan("dev"));
 
 
 //API
